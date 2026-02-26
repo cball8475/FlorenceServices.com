@@ -54,19 +54,37 @@ function initForm(form) {
     if (!validate(form)) return;
     const btn = form.querySelector('[type=submit]');
     const orig = btn.innerHTML;
-    btn.innerHTML = 'Submitting…'; btn.disabled = true;
+    btn.innerHTML = 'Connecting you…'; btn.disabled = true;
+
+    // Primary: Formspree (silent background post)
+    // Parallel: also sends notification email via mailto as backup
+    let submitted = false;
+
     if (FORMSPREE) {
       try {
-        const r = await fetch(FORMSPREE, { method:'POST', body: new FormData(form), headers:{Accept:'application/json'} });
-        if (r.ok) { form.reset(); showSuccess(success); }
-        else alert('Something went wrong. Please call us directly.');
-      } catch { alert('Network error. Please call us.'); }
-      finally { btn.innerHTML = orig; btn.disabled = false; }
-    } else {
-      window.location.href = `mailto:${MAILTO}?subject=${encodeURIComponent('Dumpster Quote Request')}&body=${buildBody(form)}`;
-      showSuccess(success, true);
-      btn.innerHTML = orig; btn.disabled = false;
+        const r = await fetch(FORMSPREE, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (r.ok) {
+          submitted = true;
+          form.reset();
+          showSuccess(success);
+        }
+      } catch(err) {
+        console.warn('Formspree error:', err);
+      }
     }
+
+    // Fallback: open mailto if Formspree failed
+    if (!submitted) {
+      window.location.href = buildMailto(form);
+      showSuccess(success, true);
+    }
+
+    btn.innerHTML = orig;
+    btn.disabled = false;
   });
 }
 
@@ -91,22 +109,28 @@ function validate(form) {
 
 function showSuccess(el, mailto=false) {
   if (!el) return;
-  if (mailto) { el.querySelector('.s-sub').textContent = 'Your mail client opened with a pre-filled email. Send it to complete your request.'; }
+  if (mailto) {
+    const sub = el.querySelector('.s-sub');
+    if(sub) sub.textContent = 'Your mail client opened with a pre-filled request. Send it to complete your submission.';
+  }
   el.classList.add('show');
-  el.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-function buildBody(form) {
+function buildMailto(form) {
+  const data = new FormData(form);
   const lines = [];
-  new FormData(form).forEach((v,k) => { if(k !== '_subject') lines.push(`${k}: ${v}`); });
-  return encodeURIComponent(lines.join('\n'));
+  data.forEach((v, k) => { if(k !== 'consent') lines.push(`${k}: ${v}`); });
+  const subject = encodeURIComponent('New Dumpster Quote Request — Florence SC Services');
+  const body = encodeURIComponent(lines.join('\n'));
+  return `mailto:${MAILTO}?subject=${subject}&body=${body}`;
 }
 
 /* ACTIVE NAV */
 const path = window.location.pathname;
 document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
   const href = a.getAttribute('href') || '';
-  if (href && (path.endsWith(href) || (href !== 'index.html' && path.includes(href.replace('.html',''))))) {
+  if (href && href !== 'index.html' && path.includes(href.replace('.html',''))) {
     a.setAttribute('aria-current','page');
   }
 });
