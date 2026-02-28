@@ -13,15 +13,58 @@
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"Florence SC Services — Dumpster Rental Quotes",
-  "description":"Free roll-off dumpster rental quotes for Florence, SC. Connect with local providers same day.",
-  "url":"https://florencescservices.com/",
-  "telephone":"+18439380480",
-  "email":"dumpsters@florencescservices.com",
-  "address":{"@type":"PostalAddress","addressLocality":"Florence","addressRegion":"SC","postalCode":"29501","addressCountry":"US"},
-  "areaServed":["Florence SC", "Darlington SC", "Hartsville SC", "Marion SC", "Lake City SC", "Sumter SC"]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://florencescservices.com/#business",
+      "name": "Florence SC Services — Dumpster Rental Quotes",
+      "alternateName": ["Florence SC Dumpster Rental", "Florence Dumpster Rental", "Pee Dee Dumpster Rental"],
+      "description": "Free roll-off dumpster rental quotes for Florence, SC. Connect with local providers same day.",
+      "url": "https://florencescservices.com/",
+      "telephone": "+18439380480",
+      "email": "dumpsters@florencescservices.com",
+      "priceRange": "$$",
+      "address": {"@type": "PostalAddress", "addressLocality": "Florence", "addressRegion": "SC", "postalCode": "29501", "addressCountry": "US"},
+      "geo": {"@type": "GeoCoordinates", "latitude": 34.1954, "longitude": -79.7626},
+      "areaServed": [
+        {"@type": "City", "name": "Florence", "sameAs": "https://en.wikipedia.org/wiki/Florence,_South_Carolina"},
+        {"@type": "City", "name": "Darlington", "sameAs": "https://en.wikipedia.org/wiki/Darlington,_South_Carolina"},
+        {"@type": "City", "name": "Hartsville", "sameAs": "https://en.wikipedia.org/wiki/Hartsville,_South_Carolina"},
+        {"@type": "City", "name": "Lake City", "sameAs": "https://en.wikipedia.org/wiki/Lake_City,_South_Carolina"},
+        {"@type": "City", "name": "Marion", "sameAs": "https://en.wikipedia.org/wiki/Marion,_South_Carolina"},
+        {"@type": "AdministrativeArea", "name": "Pee Dee Region"}
+      ],
+      "knowsAbout": ["Dumpster Rental", "Roll-Off Container Rental", "Junk Removal", "Construction Waste Disposal", "Residential Cleanouts", "Florence South Carolina"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://florencescservices.com/#website",
+      "url": "https://florencescservices.com",
+      "name": "Florence SC Dumpster Rental",
+      "publisher": {"@id": "https://florencescservices.com/#business"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What size dumpster do I need in Florence SC?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For small cleanouts, a 10-yard handles most single-room or garage cleanouts. Kitchen and bathroom renovations usually need 15–20 yards. Full home remodels and roofing jobs typically need 20–30 yards. Large construction or demolition: 30–40 yards."}
+        },
+        {
+          "@type": "Question",
+          "name": "How much does dumpster rental cost in Florence SC?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Prices in the Florence area typically range from $250–$450 for a 10-yard up to $550–$1,000+ for a 40-yard. Final pricing depends on size, debris type, rental duration, and provider."}
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can I get a dumpster delivered in Florence County?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Most local Florence County providers can deliver within 24–48 hours. Same-day delivery is sometimes available for urgent projects."}
+        }
+      ]
+    }
+  ]
 }
 </script>
   <!-- Google tag (gtag.js) -->
@@ -48,12 +91,14 @@
         </div>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
-        <div class="nav-links"><a href="services.html">Services</a>
-<a href="pricing.html">Pricing</a>
-<a href="service-area.html">Service Area</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</div>
+        <div class="nav-links">
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="service-area.html">Service Area</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="dumpster-rental-florence-sc.html">Resources</a>
+        </div>
         <a href="tel:+18439380480" class="btn btn-call btn-sm nav-cta" style="margin-right:.4rem">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.29h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           (843) 938-0480
@@ -68,11 +113,11 @@
   </div>
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
     <a href="services.html">Services</a>
-<a href="pricing.html">Pricing</a>
-<a href="service-area.html">Service Area</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-
+    <a href="pricing.html">Pricing</a>
+    <a href="service-area.html">Service Area</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="dumpster-rental-florence-sc.html">Resources</a>
     <a href="tel:+18439380480" class="btn btn-call btn-block">Call (843) 938-0480</a>
     <a href="contact.html" class="btn btn-primary btn-block">Get Connected with Local Providers</a>
   </nav>
@@ -289,6 +334,37 @@
   </div>
 </section>
 
+<!-- RESOURCES / ARTICLES -->
+<section class="section section-alt" aria-labelledby="resources-heading">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="eyebrow">Local Guides</span>
+      <h2 id="resources-heading">Florence SC Dumpster Rental Resources</h2>
+      <p>Expert local guides to help you plan your project, stay compliant, and save money on <a href="dumpster-rental-florence-sc.html" style="color:var(--green);font-weight:600">dumpster rental in Florence SC</a>.</p>
+    </div>
+    <div class="cards">
+      <a href="construction-dumpster-rental-florence-sc.html" class="card" style="text-decoration:none;color:inherit">
+        <div style="font-size:2rem;margin-bottom:.75rem">🏗️</div>
+        <h3>Construction Dumpster Rental — Contractor Guide</h3>
+        <p>Container sizing, heavy debris limits, swap-out services, and C&D waste compliance for Florence SC job sites.</p>
+        <span style="color:var(--green);font-size:.85rem;font-weight:600">Read contractor guide →</span>
+      </a>
+      <a href="residential-dumpster-rental-darlington-hartsville.html" class="card" style="text-decoration:none;color:inherit">
+        <div style="font-size:2rem;margin-bottom:.75rem">🏠</div>
+        <h3>Residential Guide — Darlington & Hartsville</h3>
+        <p>What Pee Dee homeowners need to know: sizing, driveway protection, local delivery, and accepted items.</p>
+        <span style="color:var(--green);font-size:.85rem;font-weight:600">Read homeowner guide →</span>
+      </a>
+      <a href="florence-sc-landfill-guide.html" class="card" style="text-decoration:none;color:inherit">
+        <div style="font-size:2rem;margin-bottom:.75rem">♻️</div>
+        <h3>Florence SC Landfill Guide & Recycling Centers</h3>
+        <p>Landfill hours, prohibited items, specialty waste disposal, and environmental compliance for Florence County.</p>
+        <span style="color:var(--green);font-size:.85rem;font-weight:600">Read landfill guide →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="cta-banner" aria-labelledby="cta-h">
   <div class="container">
     <h2 id="cta-h">Ready to Get Your Dumpster?</h2>
@@ -336,6 +412,12 @@
         <li><a href="service-area.html">Service Area</a></li>
         <li><a href="contact.html">Get Connected</a></li>
       </ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul>
+        <li><a href="dumpster-rental-florence-sc.html">Florence SC Guide</a></li>
+        <li><a href="construction-dumpster-rental-florence-sc.html">Contractor Guide</a></li>
+        <li><a href="residential-dumpster-rental-darlington-hartsville.html">Homeowner Guide</a></li>
+        <li><a href="florence-sc-landfill-guide.html">Landfill Guide</a></li>
+      </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -344,10 +426,11 @@
       </ul></div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Florence SC Services. Local dumpster rental quotes — Florence County, SC.</p>
+      <p>© 2026 Florence SC Services. Local dumpster rental quotes — Florence County, SC.</p>
       <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
     </div>
   </div>
 </footer>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
