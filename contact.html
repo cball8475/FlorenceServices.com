@@ -99,7 +99,7 @@
   <div class="container">
     <div class="contact-cards">
       <div class="contact-card"><div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.29h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><h4>Call Us</h4><a href="tel:+18439380480">(843) 938-0480</a><p>Mon–Fri 8am–6pm, Sat 9am–2pm</p></div></div>
-      <div class="contact-card"><div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Email Us</h4><a href="mailto:dumpsters@florencescservices.com">dumpsters@florencescservices.com</a><p>Response within 1 business day</p></div></div>
+      <div class="contact-card"><div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Email Us</h4><a href="/cdn-cgi/l/email-protection#fd9988908d8e89988f8ebd9b91928f98939e988e9e8e988f8b949e988ed39e9290"><span class="__cf_email__" data-cfemail="4b2f3e263b383f2e39380b2d2724392e25282e3828382e393d22282e3865282426">[email&#160;protected]</span></a><p>Response within 1 business day</p></div></div>
       <div class="contact-card"><div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><h4>Service Area</h4><a href="service-area.html">Florence County &amp; Pee Dee, SC</a><p>Including Darlington, Hartsville, Marion</p></div></div>
     </div>
 
@@ -109,7 +109,8 @@
       <p>Fields marked <span style="color:var(--amber)">*</span> are required.</p>
     </div>
     <div style="max-width:680px">
-<form class="lead-form-worker" id="contact-form" novalidate>  <div class="form-grid">
+      <form class="lead-form-worker" id="contact-form" novalidate>
+  <div class="form-grid">
     <div class="form-row-2">
       <div class="field">
         <label for="contact-form-name">Name <span class="req">*</span></label>
@@ -230,7 +231,7 @@
         <address class="footer-nap">
           Florence, South Carolina 29501<br>
           <a href="tel:+18439380480">(843) 938-0480</a><br>
-          <a href="mailto:dumpsters@florencescservices.com">dumpsters@florencescservices.com</a>
+          <a href="/cdn-cgi/l/email-protection#442031293437302136370422282b36212a27213727372136322d2721376a272b29"><span class="__cf_email__" data-cfemail="3054455d40434455424370565c5f42555e5355435343554246595355431e535f5d">[email&#160;protected]</span></a>
         </address>
       </div>
       <div class="footer-col">
@@ -278,7 +279,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 <script>
 // ── CLOUDFLARE WORKER FORM SUBMISSION ─────────────────────────
 const WORKER_URL = "https://florence-lead-capture.cball8475.workers.dev";
@@ -335,19 +336,4 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       successEl.style.display = "flex";
       // Fire GA event
       if (typeof gtag !== "undefined") {
-        gtag("event", "lead_submitted", { event_category: "contact_form", event_label: "contact_page" });
-      }
-    } else {
-      throw new Error(data.error || "Unknown error");
-    }
-
-  } catch (err) {
-    console.error(err);
-    errorEl.style.display = "block";
-    btn.disabled = false;
-    btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg> Send My Quote Request';
-  }
-});
-</script>
-</body>
-</html>
+        gtag("event", "lead_submitted", { event_category: "contact_form", event_label: "contact_
