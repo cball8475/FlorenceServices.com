@@ -11,5 +11,18 @@
     "source": "direct",
     "contacted": false,
     "score": 88
+  },
+  {
+    "id": "lead_1772391819820_hwhha",
+    "date": "2026-03-01T19:03:39.820Z",
+    "name": "Test",
+    "phone": "843-555-1234",
+    "email": "test@test.com",
+    "service": "20yd",
+    "city": "Florence",
+    "message": "Test submission",
+    "source": "direct",
+    "contacted": false,
+    "score": 80
   }
 ]
