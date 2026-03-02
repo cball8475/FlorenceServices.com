@@ -26,5 +26,18 @@
     "contacted": true,
     "score": 80,
     "contactedAt": "2026-03-02T16:38:31.023Z"
+  },
+  {
+    "id": "lead_1772475972403_r4mb7",
+    "date": "2026-03-02T18:26:12.403Z",
+    "name": "Test",
+    "phone": "8437581987",
+    "email": "cball8475@gmail.com",
+    "service": "40yd",
+    "city": "29505",
+    "message": "Project: demolition | Timeline: this-week | Debris: concrete",
+    "source": "referral",
+    "contacted": false,
+    "score": 83
   }
 ]
