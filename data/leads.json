@@ -23,7 +23,8 @@
     "city": "Florence",
     "message": "Test submission",
     "source": "direct",
-    "contacted": false,
-    "score": 80
+    "contacted": true,
+    "score": 80,
+    "contactedAt": "2026-03-02T16:38:31.023Z"
   }
 ]
