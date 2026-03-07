@@ -54,5 +54,19 @@
     "addedAt": "2026-03-07T18:39:56.301Z",
     "lastContact": null,
     "score": 85
+  },
+  {
+    "place_id": "ChIJ7fuTspggfQMR0VcLy5eJPWI",
+    "name": "Roberts Dumpster Rentals, LLC",
+    "formatted_phone_number": "(803) 246-0609",
+    "vicinity": "7445 SC-341, Kershaw, SC 29067, USA",
+    "rating": 5,
+    "user_ratings_total": 150,
+    "website": "https://www.robertsdumpsterrentals.com/",
+    "notes": "",
+    "stage": "prospect",
+    "addedAt": "2026-03-07T18:39:57.779Z",
+    "lastContact": null,
+    "score": 85
   }
 ]
