@@ -33,16 +33,48 @@
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"Florence SC Services — Dumpster Rental Quotes",
-  "description":"Free roll-off dumpster rental quote requests for Florence, SC and surrounding communities.",
-  "url":"https://florencescservices.com/",
-  "telephone":"+18439380480",
-  "email":"dumpsters@florencescservices.com",
-  "address":{"@type":"PostalAddress","addressLocality":"Florence","addressRegion":"SC","postalCode":"29501","addressCountry":"US"},
-  "areaServed":["Florence SC","Darlington SC","Hartsville SC","Marion SC","Lake City SC","Sumter SC"]
-,
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://florencescservices.com/#business",
+      "name": "Florence SC Services — Dumpster Rental Quotes",
+      "url": "https://florencescservices.com",
+      "telephone": "+18439380480",
+      "email": "dumpsters@florencescservices.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Florence",
+        "addressRegion": "SC",
+        "postalCode": "29501",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Florence"
+        },
+        {
+          "@type": "City",
+          "name": "Darlington"
+        },
+        {
+          "@type": "City",
+          "name": "Hartsville"
+        },
+        {
+          "@type": "City",
+          "name": "Lake City"
+        },
+        {
+          "@type": "City",
+          "name": "Marion"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Pee Dee Region"
+        }
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
@@ -50,7 +82,26 @@
         "bestRating": "5",
         "worstRating": "1"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://florencescservices.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Request a Free Quote",
+          "item": "https://florencescservices.com/contact.html"
+        }
+      ]
     }
+  ]
+}
 </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMMEPH2R1G"></script>
@@ -305,7 +356,7 @@
         <address class="footer-nap">
           Florence, South Carolina 29501<br>
           <a href="tel:+18439380480">(843) 938-0480</a><br>
-          <a href="mailto:dumpsters@florencescservices.com">dumpsters@florencescservices.com</a>
+          <a href="/cdn-cgi/l/email-protection#bfdbcad2cfcccbdacdccffd9d3d0cddad1dcdaccdcccdacdc9d6dcdacc91dcd0d2"><span class="__cf_email__" data-cfemail="5c3829312c2f28392e2f1c3a30332e39323f392f3f2f392e2a353f392f723f3331">[email&#160;protected]</span></a>
         </address>
       </div>
       <div class="footer-col"><h4>City Pages</h4><ul>
@@ -344,7 +395,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){var b=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu'),h=b&&b.querySelector('.i-ham'),c=b&&b.querySelector('.i-close');if(!b||!m)return;b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close navigation':'Open navigation');if(h)h.style.display=o?'none':'';if(c)c.style.display=o?'':'none'});document.addEventListener('click',function(e){if(!b.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');if(h)h.style.display='';if(c)c.style.display='none'}});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false');if(h)h.style.display='';if(c)c.style.display='none'})})})();
 </script>
 <div class="sticky-cta-bar"><a href="tel:+18439380480" class="sc-call">📞 Call Now</a><a href="https://florencescservices.com/contact.html" class="sc-quote">Get Free Quote →</a></div>
