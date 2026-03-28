@@ -288,8 +288,15 @@
     </div>
     <div class="form-row-2">
       <div class="field">
-        <label for="contact-form-date">Preferred Delivery Date</label>
-        <input type="date" id="contact-form-date" name="delivery_date">
+        <label for="contact-form-timeline">Timeline <span class="req">*</span></label>
+        <select id="contact-form-timeline" name="timeline" required>
+          <option value="">When do you need it?</option>
+          <option value="asap">ASAP — Today or Tomorrow</option>
+          <option value="this-week">This Week</option>
+          <option value="next-week">Next Week</option>
+          <option value="flexible">Flexible / Planning Ahead</option>
+        </select>
+        <span class="field-err" role="alert">Please select a timeline.</span>
       </div>
       <div class="field">
         <label for="contact-form-duration">Rental Duration</label>
@@ -435,7 +442,7 @@
         city: city,
         service: service,
         debris_type: document.getElementById('contact-form-debris').value,
-        delivery_date: document.getElementById('contact-form-date').value,
+        timeline: document.getElementById('contact-form-timeline').value,
         rental_duration: document.getElementById('contact-form-duration').value,
         message: document.getElementById('contact-form-notes').value.trim(),
         source: 'website',
