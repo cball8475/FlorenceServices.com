@@ -441,7 +441,7 @@
         urgency: 'this_week'
       };
 
-      var res = await fetch('https://florence-crm-api.cball8475.workers.dev/submit-lead', {
+      var res = await fetch('https://florence-lead-capture.cball8475.workers.dev', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
