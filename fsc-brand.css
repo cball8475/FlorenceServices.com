@@ -83,11 +83,9 @@
   background: rgba(30,58,82,0.07);
 }
 
-/* Phone number in header */
-.header-phone,
-a[href^="tel"] {
-  color: var(--green-dark);
-}
+/* Phone number in header — scoped to avoid overriding btn-call white text */
+.header-phone { color: var(--green-dark); }
+a[href^="tel"]:not(.btn) { color: var(--green-dark); }
 
 
 /* ── 3. HERO → LIGHT BACKGROUND ─────────────────────────── */
@@ -262,3 +260,52 @@ input[type="submit"]:hover {
   --font-display: 'DM Serif Display', Georgia, serif;
 }
 */
+
+
+/* ── 10. MISSING STYLES (pre-existing gaps) ──────────────── */
+/* cta-btn / cta-section — no CSS in styles.css, used on
+   construction + residential pages */
+.cta-section {
+  background: var(--green-xlight);
+  border: 1px solid var(--green-light);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+.cta-section h2 {
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+.cta-section p {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--amber);
+  color: #ffffff;
+  border: 2px solid var(--amber);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.cta-btn:hover {
+  background: var(--amber-dark);
+  border-color: var(--amber-dark);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
