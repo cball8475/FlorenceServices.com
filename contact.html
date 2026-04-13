@@ -310,7 +310,7 @@
       <label for="contact-form-notes">Additional Notes</label>
       <textarea id="contact-form-notes" name="message" placeholder="Project details, access info, budget, special requirements…"></textarea>
     </div>
-    <input type="hidden" name="utm_source" id="utm_source" value=""><input type="hidden" name="utm_medium" id="utm_medium" value=""><input type="hidden" name="utm_campaign" id="utm_campaign" value=""><input type="hidden" name="utm_content" id="utm_content" value=""><input type="hidden" name="utm_term" id="utm_term" value=""><input type="hidden" name="gclid" id="gclid" value=""><div class="consent-row">
+<div class="consent-row">
       <input type="checkbox" id="contact-form-consent" name="consent" required>
       <label for="contact-form-consent">By checking this box, I consent to receive SMS/text messages from Florence SC Services LLC related to my service request (confirmations, status updates, and operator contact information). Msg &amp; data rates may apply. Reply STOP to opt out at any time. See our <a href="privacy.html">Privacy Policy</a>. <span class="req">*</span>
         <span class="field-err" id="contact-form-consent-err" style="display:none" role="alert">You must agree to continue.</span>
@@ -442,12 +442,12 @@
         message: document.getElementById('contact-form-notes').value.trim(),
         source: 'website',
         urgency: 'this_week',
-        utm_source:   document.getElementById('utm_source')?.value   || null,
-        utm_medium:   document.getElementById('utm_medium')?.value   || null,
-        utm_campaign: document.getElementById('utm_campaign')?.value || null,
-        utm_content:  document.getElementById('utm_content')?.value  || null,
-        utm_term:     document.getElementById('utm_term')?.value     || null,
-        gclid:        document.getElementById('gclid')?.value        || null
+        utm_source:   form.querySelector('input[name="utm_source"]')?.value   || null,
+        utm_medium:   form.querySelector('input[name="utm_medium"]')?.value   || null,
+        utm_campaign: form.querySelector('input[name="utm_campaign"]')?.value || null,
+        utm_content:  form.querySelector('input[name="utm_content"]')?.value  || null,
+        utm_term:     form.querySelector('input[name="utm_term"]')?.value     || null,
+        gclid:        form.querySelector('input[name="gclid"]')?.value        || null
       };
 
       var res = await fetch('https://florence-lead-capture.cball8475.workers.dev', {
