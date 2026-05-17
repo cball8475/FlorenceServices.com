@@ -34,7 +34,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="canonical" href="https://florencescservices.com/dumpster-rental-florence-sc.html">
-  <title>Dumpster Rental Florence SC | 20–40 Yard Roll-Off from $400 | Same-Day</title>
+  <title>Dumpster Rental Florence SC | Same-Day Delivery from $400</title>
     <!-- SEO Patch: Canonical -->
 <!-- SEO Patch: Open Graph -->
     <meta property="og:type" content="website">
@@ -371,7 +371,7 @@
     <div class="funnel-card" id="quote" style="border-radius:12px">
       <div class="funnel-title">Get a Free Dumpster Quote in Florence</div>
       <div class="funnel-sub">Tell us about your project and a local provider will reach out — usually within hours.</div>
-      <form class="lead-form-worker" id="city-form" novalidate>
+      <form class="lead-form-worker" id="city-form" novalidate><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="gclid" value="">
         <div class="form-grid">
           <div class="form-row-2">
             <div class="field"><label for="city-form-name">Your Name <span class="req">*</span></label><input type="text" id="city-form-name" name="name" required autocomplete="name" placeholder="Jane Smith"><span class="field-err" role="alert">Name is required.</span></div>
@@ -903,5 +903,29 @@ document.querySelectorAll(".faq-q").forEach(function(btn){
 </div>
 
 <script type="text/javascript" src="//cdn.callrail.com/companies/322241453/092079e8ac0096473712/12/swap.js"></script>
-</body>
+<script>
+(function(){
+  var KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'];
+  var stored={};
+  try{ var s=sessionStorage.getItem('fsc_utms'); if(s) stored=JSON.parse(s); }catch(e){}
+  var p=new URLSearchParams(window.location.search);
+  KEYS.forEach(function(k){ if(p.get(k)) stored[k]=p.get(k); });
+  if(Object.keys(stored).length){
+    try{ sessionStorage.setItem('fsc_utms',JSON.stringify(stored)); }catch(e){}
+  }
+  function fill(){
+    document.querySelectorAll('form').forEach(function(f){
+      KEYS.forEach(function(k){
+        var el=f.querySelector('input[name="'+k+'"]');
+        if(el && stored[k]) el.value=stored[k];
+      });
+    });
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',fill);
+  } else {
+    fill();
+  }
+})();
+</script></body>
 </html>
