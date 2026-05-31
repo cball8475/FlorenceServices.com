@@ -40,6 +40,7 @@ a { color: var(--green); text-decoration: none; }
 a:hover { text-decoration: underline; }
 button, input, select, textarea { font-family: inherit; font-size: inherit; }
 img { max-width: 100%; display: block; }
+iframe { max-width: 100%; }
 
 /* TYPOGRAPHY */
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; color: var(--dark); line-height: 1.15; letter-spacing: -0.01em; }
