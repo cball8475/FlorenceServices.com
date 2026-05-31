@@ -476,8 +476,8 @@ tbody td:first-child { font-family: var(--font-display); font-weight: 700; font-
 .page-hero .pillar-link { color: rgba(255,255,255,0.85); margin-top: 0.5rem; font-size: 0.85rem; }
 .page-hero .pillar-link a { color: #ffffff; text-decoration: underline; }
 .page-hero .pillar-link a:hover { color: var(--green-light); }
-.breadcrumb { display: flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-bottom: 0.65rem; flex-wrap: wrap; }
-.breadcrumb a { color: rgba(255,255,255,0.55); }
+.breadcrumb { display: flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; color: rgba(255,255,255,0.7); margin-bottom: 0.65rem; flex-wrap: wrap; }
+.breadcrumb a { color: rgba(255,255,255,0.85); }
 .breadcrumb a:hover { color: var(--white); }
 
 /* PRICING */
@@ -584,7 +584,7 @@ tbody td:first-child { font-family: var(--font-display); font-weight: 700; font-
 .footer-col a:hover { color: var(--white); text-decoration: none; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.78rem; }
 .footer-legal { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
-.footer-legal a { color: rgba(255,255,255,0.45); }
+.footer-legal a { color: rgba(255,255,255,0.7); }
 .footer-legal a:hover { color: var(--white); }
 
 /* RESPONSIVE */
@@ -617,8 +617,8 @@ tbody td:first-child { font-family: var(--font-display); font-weight: 700; font-
 @media (max-width: 1023px) {
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; align-items: center; }
-  .mobile-bar { display: flex; }
-  body { padding-bottom: 70px; }
+  /* .mobile-bar retired — .fsc-sticky-cta (per-page) is the sole sticky bar.
+     Kept display:none via base rule so any leftover markup stays hidden. */
 }
 @media (max-width: 599px) {
   .cta-actions .btn { max-width: 100%; white-space: normal; text-align: center; }
@@ -909,3 +909,52 @@ tbody td:first-child { font-family: var(--font-display); font-weight: 700; font-
 @media (min-width: 720px) {
   .two-col { grid-template-columns: 1fr 1fr; }
 }
+
+/* ===== CITY-PAGE CONTENT CLASSES (toc, price-table, info-box, check-list) ===== */
+.toc {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.5rem 1.75rem; margin: 0 0 2rem;
+}
+.toc h3 { margin: 0 0 0.85rem; font-size: 1.15rem; color: var(--dark); }
+.toc ol { margin: 0; padding-left: 1.25rem; display: grid; gap: 0.45rem 1.5rem; }
+.toc ol li { color: var(--text); }
+.toc ol li a { color: var(--green-dark); font-weight: 500; }
+@media (min-width: 720px) { .toc ol { grid-template-columns: 1fr 1fr; } }
+
+.price-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  margin: 0.5rem 0 1.75rem; border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm);
+  font-size: 0.92rem;
+}
+.price-table th, .price-table td {
+  padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--border);
+}
+.price-table thead th {
+  background: var(--dark); color: var(--white);
+  font-family: var(--font-display); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.02em; font-size: 0.78rem;
+}
+.price-table tbody tr:last-child td { border-bottom: 0; }
+.price-table tbody tr:nth-child(even) td { background: #f8fafc; }
+.price-table td:last-child { font-weight: 700; color: var(--green-dark); white-space: nowrap; }
+
+.info-box {
+  background: var(--green-xlight); border: 1px solid var(--green-light);
+  border-left: 4px solid var(--green); border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem; margin: 0.5rem 0 1.75rem;
+  font-size: 0.94rem; color: var(--text); line-height: 1.6;
+}
+.info-box strong { color: var(--green-dark); }
+
+.check-list { margin: 0.5rem 0 1.75rem; padding: 0; list-style: none; }
+.check-list li {
+  position: relative; padding-left: 1.85rem; margin-bottom: 0.55rem;
+  color: var(--text); line-height: 1.5;
+}
+.check-list li::before {
+  content: "\2713"; position: absolute; left: 0; top: 0;
+  color: var(--green); font-weight: 800;
+}
+.check-list.no-list li::before { content: "\2717"; color: #dc2626; }
